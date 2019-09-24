@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    float speed = 4;
+    float speed = 6;
     float rotSpeed = 160;
     float rot = 0f;
     float gravity = 8;
@@ -29,9 +29,9 @@ public class PlayerMovement : MonoBehaviour
                 if (Input.GetKey(KeyCode.LeftShift))
                 {
                     moveDirection = new Vector3(0, 0, 1);
-                    moveDirection *= speed * 2;
+                    moveDirection *= speed * 1.5f;
                     moveDirection = transform.TransformDirection(moveDirection);
-                    anim.SetFloat("Speed", speed * 2);
+                    anim.SetFloat("Speed", speed * 1.5f);
                 } else
                 {
                     moveDirection = new Vector3(0, 0, 1);
